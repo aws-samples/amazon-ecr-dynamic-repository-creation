@@ -1,17 +1,55 @@
-## My Project
+# Dynamic Creation Of Amazon Ecr Repositories Upon Push
 
-TODO: Fill this README out!
 
-Be sure to:
+## Getting started
 
-* Change the title in this README
-* Edit your repository description on GitHub
+To provision resources using terrform, the terraform role should have the below permissions at minumum. 
 
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+```json
+"iam:CreatePolicy",
+"iam:PassRole",
+"iam:DeleteRolePolicy",
+"iam:TagRole",
+"iam:DeletePolicy",
+"iam:CreateRole",
+"iam:DeleteRole",
+"iam:AttachRolePolicy",
+"iam:TagPolicy",
+"events:TagResource",
+"ecr:PutRegistryPolicy",
+"lambda:CreateFunction",
+"lambda:UpdateFunctionEventInvokeConfig",
+"lambda:TagResource",
+"lambda:AddPermission",
+"lambda:PutFunctionEventInvokeConfig",
+"lambda:DeleteFunctionEventInvokeConfig",
+"lambda:DeleteFunction",
+"lambda:UntagResource",
+"lambda:RemovePermission",
+"lambda:ListFunctions",
+"ecr:GetRegistryPolicy",
+"events:PutRule",
+"iam:GetRole",
+"iam:ListRolePolicies",
+"iam:ListAttachedRolePolicies",
+"ecr:DeleteRegistryPolicy",
+"iam:ListInstanceProfilesForRole",
+"events:DescribeRule",
+"events:ListTagsForResource",
+"events:DeleteRule",
+"lambda:GetFunction",
+"lambda:ListVersionsByFunction",
+"lambda:GetFunctionCodeSigningConfig",
+"lambda:GetFunctionEventInvokeConfig",
+"lambda:GetPolicy",
+"logs:CreateLogGroup",
+"events:PutTargets",
+"logs:TagResource",
+"events:ListTargetsByRule",
+"events:RemoveTargets",
+"logs:DescribeLogGroups",
+"logs:ListTagsLogGroup",
+"logs:DeleteLogGroup",
+"iam:PutRolePolicy",
+"iam:GetRolePolicy"
+```
