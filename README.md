@@ -42,6 +42,18 @@ cd amazon-ecr-dynamic-repository-creation
 `d.` Create or update infrastructure: `terraform apply --auto-approve`
 
 
+## Docker Client Wrapper
+
+If the Docker client does not retry when pushing images to a non-existent ECR repository, use the Docker client wrapper script `docker_retry.sh`, which includes a retry mechanism.
+
+
+```bash
+git clone <repo>
+cd amazon-ecr-dynamic-repository-creation
+chmod +x docker_retry.sh
+./docker_retry.sh push <IMAGE>:<TAG>
+```
+
 `Note: To provision resources using terrform, the terraform deployer user or role should have the below IAM permissions at minumum.` 
 
 ```json
